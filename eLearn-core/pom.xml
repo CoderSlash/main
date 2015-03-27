@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+	  <groupId>org.tdh.eLearn</groupId>
+	  <artifactId>eLearn</artifactId>
+	  <version>0.0.1-SNAPSHOT</version>
+  	  <relativePath>../../father/eLearn/pom.xml</relativePath>
+  </parent>	
+	
+
+  <artifactId>eLearn-core</artifactId>
+  <packaging>jar</packaging>
+
+  <name>eLearn-core</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <!-- ============================所有测试相关包=========================== -->
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	    </dependency>
+	 <!--spring聚合junit单元测试框架  -->
+	    <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-test</artifactId>
+		</dependency>
+		<!--基于service层的测试包  -->
+		<dependency>
+		  <groupId>org.easymock</groupId>
+		  <artifactId>easymock</artifactId>
+		</dependency>
+		<!--基于dao层的DBunit的测试框架  -->
+		<dependency>
+		  <groupId>org.dbunit</groupId>
+		  <artifactId>dbunit</artifactId>
+		</dependency>
+		<!--spring聚合DBunit数据库的单元测试框架  -->
+		<dependency>
+		  <groupId>com.github.springtestdbunit</groupId>
+		  <artifactId>spring-test-dbunit</artifactId>
+		</dependency>
+	
+		<!-- ==============================================================hibernate相关包 -->
+	    <dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-core</artifactId>
+		</dependency>
+		<!-- 实现依赖注入的包 -->
+	    <dependency>
+		  <groupId>javax.inject</groupId>
+		  <artifactId>javax.inject</artifactId>
+		</dependency>
+	    <!-- oracle的数据库驱动包 -->
+	    <dependency>
+		  <groupId>org.casper.oracle</groupId>
+		  <artifactId>ojdbc</artifactId>
+		</dependency>
+	    <!-- 数据库连接池 -->
+	    <dependency>
+		  <groupId>commons-dbcp</groupId>
+		  <artifactId>commons-dbcp</artifactId>
+		</dependency>
+	    
+	    <!-- ==============================================================spring相关包 -->
+	    
+	    <!--spring上下文包  -->
+	    <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-context</artifactId>
+		</dependency>
+		<!--spring核心包  -->
+	    <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-core</artifactId>
+		</dependency>
+		<!--spring的beans  -->
+	    <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-beans</artifactId>
+		</dependency>
+		<!--spring的aop包  -->
+		<dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-aop</artifactId>
+		</dependency>
+		<!--spring aop需要的植入器  -->
+		<dependency>
+		  <groupId>org.aspectj</groupId>
+		  <artifactId>aspectjweaver</artifactId>
+		</dependency>
+		<!--spring与hibernate整合包  -->
+	    <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-orm</artifactId>
+		</dependency>
+		<!-- slf4j日志组件 -->
+    	<dependency>
+		  <groupId>org.slf4j</groupId>
+		  <artifactId>slf4j-api</artifactId>
+		</dependency>
+		
+		 <dependency>
+	   		 <groupId>org.tdh.eLearn</groupId>
+	    	 <artifactId>basic-hibernate</artifactId>
+	    </dependency>
+		
+  </dependencies>
+  
+  <build>
+  	<pluginManagement>
+  		<plugins>
+  			<plugin>
+  				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+  			</plugin>
+  		</plugins>
+  	</pluginManagement>
+  </build>
+  
+</project>
